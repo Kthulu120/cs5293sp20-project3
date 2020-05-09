@@ -5,6 +5,17 @@ To setup install packages via `pip install -r requirements.txt`.
 ### Example Command
 `python ./csproject3/main.py --ingredient paprika --ingredient="soy sauce" --ingredient="sesame oil"`
 
+##### Some Example Output
+```
+Cuisine: chinese (.60)
+Closest 5 recipes: 
+id 29508 with distance 1.414 using Kneighbor
+id 8013 with distance 1.414 using Kneighbor
+id 16474 with distance 1.414 using Kneighbor
+id 36631 with distance 1.414 using Kneighbor
+id 445 with distance 1.732 using Kneighbor
+Thanks Have A Great Summer!!!!
+```
 ### Running
 Run `./csproject3/main.py` to run the main program, you run by repeating the `--ingredient` flag
 
