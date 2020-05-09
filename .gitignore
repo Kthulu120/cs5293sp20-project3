@@ -1,0 +1,10 @@
+data/*
+data/
+data
+
+*.pyc
+.env/
+.env
+.env/*
+.vscode
+.vscode/
