@@ -11,13 +11,13 @@ Run `./csproject3/main.py` to run the main program, you run by repeating the `--
 
 #### How did you turn your text into features and why?
 I turned each recipe into the object and then parsed those into a dataframe with the ingredient name as a value then when that ingredient is in a recipe we
-assigned that cell the value 1 or 0 otherwise if the recipe doesn't contain that ingredient. We use the top 1000 ingredients since this takes up considerable processing time (39,744,000 iterations when unoptimized). Along with the ingredient the id and cuisine type are also columns.
+assigned that cell the value 1 or 0 otherwise if the recipe doesn't contain that ingredient. We use the top 1000 ingredients since this takes up considerable processing time (39,744,000 iterations when unoptimized). Along with the ingredient the id and cuisine type are also columns. By constructing our features this way it allows us to load the dataset simply into our classifiers without doing any massive legwork beyond constructing the intial dataframe of recipes.
 
 #### What classifiers/clustering methods did you choose and why?
-I used the decision tree classifier, KNeighbors classifiers, along with word2Vec to find similarities between recipes. For prediction the Decision Tree with depth n (1000) allowed us to sufficiently guess the cuisine around 80% of the time. Though this could be upped to 1000 for better predictions. I chose KNeighbors since I cared about the distance of the in ingredient use between recipes and KNeighbors provided me the distance between recipes and a simple means of mapping back to the id for each group. 
+I used the decision tree classifier, KNeighbors classifiers, along with word2Vec to find similarities between recipes. For prediction the Decision Tree with depth n (1000) allowed us to sufficiently guess the cuisine around 80% of the time therefore the decision seemed like a solid choice since we're working with finite likelihoods. Though this could be upped to 1000 for better predictions. I chose KNeighbors since I cared about the distance of the an ingredient between recipes and KNeighbors provided me the distance between the ingredients of recipes and a simple means of mapping back to the id for each neighbor group. 
 
 #### What N did you choose and why?
-I chose 5 recipes since it was in the assignment but also because in the KNeighbors contstructor we found the 20 closest neighbors so we could simply grab the 5 closest points to that recipe give some ingredients.
+I chose 5 recipes since it was in the assignment but also because in the KNeighbors contstructor we found the 20 closest neighbors so we could simply grab the 5 closest points to that recipe give some ingredients. 
 
 #### Describe Function/Code
 The program runs by launching the `main.py` file in the `csproject3` folder. It then prints the  
